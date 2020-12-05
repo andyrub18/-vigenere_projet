@@ -31,7 +31,7 @@ def crack_key(cypher_text,len_key):
                 most_repeted_letter=letter
             j+=1
             index=i+j*len_key
-        key+=chr( ord(most_repeted_letter)-(ord('e')) % 240 )
+        key+=chr( abs(ord(most_repeted_letter)-(ord('e')) % 240 ))
     return key
 
 def crack(cypher,max_length):
